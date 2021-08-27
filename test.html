@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>circles test</title>
+  <style>
+    #wave {
+      font-size: 12vh;
+      line-height: 1.2;
+      font-weight: lighter;
+    }
+    #festival {
+      font-size: 9.5vh;
+      line-height: 1;
+      font-weight: bolder;
+    }
+    #wave li,
+    #festival li {
+      transition: transform 0.5s;
+    }
+    #wave li:hover,
+    #festival li:hover {
+      transform: rotate(360deg);
+    }
+    #wave,
+    #festival {
+      list-style-type: none;
+      font-style: italic;
+      /* text-shadow:
+        0 0.1rem var(--clr-bg),
+        0.1rem 0 var(--clr-bg),
+        0 -0.1rem var(--clr-bg),
+        -0.1rem 0 var(--clr-bg),
+        -0.2rem 0 var(--clr-main-dark-medium),
+        0 0.2rem var(--clr-main-dark-light),
+        0.2rem 0 var(--clr-main-dark-medium),
+        -0.15rem -0.15rem var(--clr-accent-muted),
+        0.15rem 0.15rem var(--clr-accent-muted);
+      -webkit-text-stroke-color: var(--clr-main-dark-light);
+      -webkit-text-stroke-width: 0.1rem; */
+    }
+  </style>
+</head>
+<body>
+  <ul id="wave">
+    <li>w</li>
+    <li>a</li>
+    <li>v</li>
+    <li>e</li>
+  </ul>
+  <ul id="festival">
+    <li>f</li>
+    <li>e</li>
+    <li>s</li>
+    <li>t</li>
+    <li>i</li>
+    <li>v</li>
+    <li>a</li>
+    <li>l</li>
+  </ul>
+</body>
+</html>
