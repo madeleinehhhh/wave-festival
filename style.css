@@ -1,16 +1,21 @@
 :root {
-  --clr-bg: #b9ceed;
+  --clr-bg: rgb(185, 206, 237, 0.6);
+  --clr-bg-half: rgb(185, 206, 237, 0.95);
 
   --clr-main-dark: #313c82;
   --clr-main-dark-dark: rgba(49, 60, 130, 0.5);
   --clr-main-dark-medium: rgba(49, 60, 130, 0.25);
   --clr-main-dark-light: rgba(49, 60, 130, 0.12);
 
+  --clr-main-bright-solid: rgba(134, 251, 185);
+  --clr-main-bright: rgba(134, 251, 185, 0.7);
+  --clr-main-bright-medium: rgba(134, 251, 185, 0.25);
+  --clr-main-bright-light: rgba(134, 251, 185, 0.12);
+
   --clr-accent-muted: #e45f56;
-  --clr-accent-bright-solid: rgba(134, 251, 185);
-  --clr-accent-bright: rgba(134, 251, 185, 0.7);
-  --clr-accent-bright-medium: rgba(134, 251, 185, 0.25);
-  --clr-accent-bright-light: rgba(134, 251, 185, 0.12);
+  --clr-accent-bright: #ebba40;
+
+  --clr-neutral-light: rgba(255, 255, 255, 0.9);
 }
 
 body {
@@ -18,6 +23,17 @@ body {
   color: var(--clr-main-dark);
   background-color: var(--clr-bg);
   font-size: 16px;
+}
+a {
+  text-decoration-color: var(--clr-main-bright-solid);
+  text-decoration-style: wavy;
+  color: inherit;
+  /* color: var(--clr-accent-muted); */
+  font-weight: bolder;
+}
+a:hover {
+  /* color: var(--clr-accent-bright); */
+  text-decoration-color: var(--clr-accent-bright);
 }
 
 .container {
@@ -27,66 +43,61 @@ body {
   z-index: 1;
 }
 
-.dflex {
-  display: flex;
-  justify-content: center;
-  gap: 6vw;
-  align-items: center;
+nav {
+  text-align: center;
+  font-size: 1.3em;
 }
-
 header {
-  color: var(--clr-accent-bright-solid);
+  color: var(--clr-main-bright-solid);
+  text-align: center;
+  padding-top: 1vh;
 }
-#wave {
-  font-size: 12vh;
+h1 {
+  font-size: 5em;
   line-height: 1.2;
   font-weight: lighter;
 }
-#festival {
-  font-size: 9.5vh;
+h2 {
+  font-size: 4em;
   line-height: 1;
   font-weight: bolder;
 }
-#wave li,
-#festival li {
-  transition: transform 0.5s;
-}
-#wave li:hover,
-#festival li:hover {
-  transform: rotate(360deg);
-}
 #wave,
 #festival {
-  list-style-type: none;
   font-style: italic;
-  text-shadow:
-    0 0.1rem var(--clr-bg),
-    0.1rem 0 var(--clr-bg),
-    0 -0.1rem var(--clr-bg),
-    -0.1rem 0 var(--clr-bg),
-    -0.2rem 0 var(--clr-main-dark-medium),
-    0 0.2rem var(--clr-main-dark-light),
-    0.2rem 0 var(--clr-main-dark-medium),
-    -0.15rem -0.15rem var(--clr-accent-muted),
-    0.15rem 0.15rem var(--clr-accent-muted);
+  text-shadow: 0 0.1rem
+    var(--clr-bg),
+      0.1rem 0
+        var(--clr-bg),
+          0 -0.1rem var(--clr-bg),
+              -0.1rem 0 var(--clr-bg),
+                  -0.2rem 0 var(--clr-main-dark-medium),
+                      0 0.2rem
+                        var(--clr-main-dark-light),
+                          0.2rem 0
+                            var(--clr-main-dark-medium),
+                              -0.15rem -0.15rem
+                                var(--clr-accent-muted), 0.15rem 0.15rem var(--clr-accent-muted);
   -webkit-text-stroke-color: var(--clr-main-dark-light);
   -webkit-text-stroke-width: 0.1rem;
 }
 
 main {
-  width: 40vw;
-  max-width: 25em;
+  margin-left: auto;
+  margin-right: auto;
 }
 main h3 {
   font-style: italic;
   font-weight: lighter;
   text-transform: uppercase;
-  font-size: 3vmin;
+  font-size: 1.3em;
   line-height: 1.4;
+  text-align: center;
+  padding-top: 4vh;
 }
 .orange {
   color: var(--clr-accent-muted);
-  text-shadow: 2px 0 var(--clr-accent-bright);
+  text-shadow: 2px 0 var(--clr-main-bright);
 }
 .lowercase {
   text-transform: lowercase;
@@ -94,30 +105,20 @@ main h3 {
 strong {
   font-weight: bold;
 }
-
-footer {
-  position: absolute;
-  bottom: 10vh;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4vh;
-}
 h4,
 h5 {
   text-align: center;
   font-weight: bolder;
-  text-shadow:
-    0 0.07rem var(--clr-bg),
-    0 -0.07rem var(--clr-bg),
-    0.07rem 0 var(--clr-accent-muted),
-    -0.07rem -0.07rem var(--clr-accent-bright),
-    0.07rem 0.07rem var(--clr-accent-bright);
+  text-shadow: 0 0.07rem
+    var(--clr-bg),
+      0 -0.07rem var(--clr-bg),
+          0.07rem 0
+            var(--clr-accent-muted),
+              -0.07rem -0.07rem var(--clr-main-bright), 0.07rem 0.07rem var(--clr-main-bright);
 }
 h4 {
   font-size: 1.4em;
+  padding-top: 3vh;
 }
 
 .background {
@@ -137,7 +138,7 @@ h4 {
 .circle {
   position: absolute;
 
-  background-color: var(--clr-accent-bright-light);
+  background-color: var(--clr-main-bright-light);
   border-radius: 100%;
 }
 
@@ -155,6 +156,75 @@ h4 {
 
   top: -18vmin;
   left: -18vmin;
+}
+
+@media screen and (min-width: 48rem) {
+  nav.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--clr-bg-half);
+    height: 100%;
+    width: 70vw;
+    padding-top: 30vh;
+    z-index: 29;
+    font-size: 1.8em;
+  }
+  .menu a {
+    display: block;
+    margin-bottom: 0.5vh;
+  }
+  .menu-switch a {
+    position: fixed;
+    right: 8vw;
+    top: 8vw;
+    z-index: 30;
+    text-transform: uppercase;
+    color: var(--clr-neutral-light);
+    display: inline-block;
+  }
+
+  /* navigation & toggle motion */
+  .close {
+    transform: translateX(100%);
+  }
+  .open {
+    transform: translateX(0%);
+  }
+  nav {
+    transition: translate 0.5s ease;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    align-items: center;
+    padding: 0 4vw;
+  }
+
+  main {
+    max-width: 30rem;
+    margin: 0;
+    padding-left: 2vw;
+  }
+  h1,
+  h2 {
+    word-break: break-all;
+    width: 1em;
+  }
+  h1 {
+    font-size: 18vh;
+  }
+  h2 {
+    font-size: 11vh;
+  }
 }
 
 svg {
@@ -186,7 +256,7 @@ path {
 #path36,
 #path38 {
   stroke: var(--clr-main-dark-light);
-  stroke-width: 0.2rem;
+  stroke-width: 0.1rem;
 }
 #path4,
 #path7,
@@ -200,8 +270,8 @@ path {
 #path25,
 #path28,
 #path33 {
-  stroke: var(--clr-main-dark-medium);
-  stroke-width: 0.1rem;
+  stroke: var(--clr-main-dark-light);
+  stroke-width: 0.05rem;
 }
 #path6,
 #path11,
@@ -218,26 +288,4 @@ path {
 #path39 {
   stroke: var(--clr-main-dark-light);
   stroke-width: 0.3rem;
-}
-
-@media (max-width: 50rem) {
-  #wave {
-    font-size: 10vh;
-  }
-  #festival {
-    font-size: 7vh;
-  }
-  main h3 {
-    font-size: 1.2em;
-  }
-  footer {
-    position:static;
-    transform: none;
-  }
-}
-
-@media (min-width: 126rem) {
-  main h3 {
-    font-size: 3em;
-  }
 }

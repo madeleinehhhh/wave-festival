@@ -12,10 +12,11 @@
 
   <link rel="stylesheet" href="_base.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="-debugger.css">
+  <!-- <link rel="stylesheet" href="-debugger.css"> -->
 
 </head>
 <body>
+
 
   <div class="background">
     <span class="circle small"></span>
@@ -62,39 +63,30 @@
       <path id="path38" d="M0,20 L60,160 L120,80"></path>
       <path id="path39" d="M0,20 L60,160 L120,80"></path>
     </svg>
-    </div>
+  </div>
 
   <div class="container">
-    <div class="dflex">
-      <header class="dflex">
-        <ul id="wave">
-          <li>w</li>
-          <li>a</li>
-          <li>v</li>
-          <li>e</li>
-        </ul>
-        <ul id="festival">
-          <li>f</li>
-          <li>e</li>
-          <li>s</li>
-          <li>t</li>
-          <li>i</li>
-          <li>v</li>
-          <li>a</li>
-          <li>l</li>
-        </ul>
-      </header>
-      <main>
-        <h3><span class="orange lowercase">wave festival</span> is where art and craft meet across Auckland, New Zealand. The Festival is the largest cultural <strong>celebration</strong> of <strong>arts + crafts</strong> with over 100 exhibitions and events forming <strong>Auckland’s design week</strong>.</h3>
-      </main>
-    </div>
-    <footer>
+    <nav class="menu-switch">
+      <a href="#">Menu</a>
+    </nav>
+    <nav class="menu close">
+      <a href="#">guests</a>
+      <a href="#">vendors</a>
+    </nav>
+    <header>
+      <h1 id="wave">wave</h1>
+      <h2 id="festival">festival</h2>
+    </header>
+    <main>
+      <h3><span class="orange lowercase">wave&nbsp;festival</span> is where art and craft meet across Auckland, New Zealand. The&nbsp;Festival is the largest cultural <strong>celebration</strong> of <strong>arts&nbsp;+&nbsp;crafts</strong> with over 100 exhibitions and events forming <strong>Auckland’s&nbsp;design&nbsp;week</strong>.</h3>
       <h4>9 September, 2019</h4>
       <h5>Auckland, New Zealand</h5>
-    </footer>
+    </main>
   </div>
   
   
   <script src="./wave.js"></script>
+  <script src="./nav.js"></script>
+
 </body>
 </html>
