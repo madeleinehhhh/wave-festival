@@ -1,52 +1,49 @@
 let xs = []
 
-let width = screen.availWidth * 1.5
-let height = screen.availHeight * 1.5
-let ratio = 1
-let currentPath
-
-for (let i = 0; i <= width; i++) {
-  xs.push(i)
-}
-
 let t = 0
 let j = 1
 let k = 1
 
+
+// let width = screen.availWidth * 1.5
+// let height = screen.availHeight * 1.5
+// let ratio
+// if (width > height) {
+//   ratio = (width + k) / height
+// } else {
+//   ratio = (height + k) / width
+// }
+
+
+let currentPath
+const svg = document.querySelector("svg")
+
+for (let i = 0; i <= 400; i++) {
+  xs.push(i)
+}
+currentPath = document.createElement(`path`)
+
 function animate() {
-  if (width > height) {
-    ratio = (width + k) / height
-  } else {
-    ratio = (height + k) / width
-  }
 
-  let points = xs.map((x) => {
-    let y = (j - k) * j * 10 * k + ratio * 24 * Math.sin((x + t) / (40 + 8 * k + k / j))
+  // for (j; j <= 2; j++) {
+    let points = xs.map((x) => {
+      // let y = (j+k) * 100 / ratio  + Math.sin((x+t) * k / (ratio * 100)) * (100-k) * (ratio-j)
+      let y = 400 + Math.sin(x+t)/40
+      return [x, y]
+    })
 
-    return [x, y]
-  })
+    let path = 'M' + points .map((p) => {
+      return p[0] + ',' + p[1]
+    })
+    
+    .join(' L');
 
-  let path =
-    'M' +
-    points
-      .map((p) => {
-        return p[0] + ',' + p[1]
-      })
-      .join(' L')
-
-  currentPath = 'path' + j
-  console.log(currentPath)
-  currentPath = document.getElementById(currentPath)
-  console.log(currentPath)
-
-  currentPath.setAttribute('d', path)
-
+    svg.appendChild(currentPath)
+    // currentPath.setAttribute("id", "path"+j)
+    currentPath.setAttribute("d", path)
+  // }
   t += 1
-
   requestAnimationFrame(animate)
 }
 
-for (j; j <= height; j++) {
-  k = Math.random()
-  animate()
-}
+animate()

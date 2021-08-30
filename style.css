@@ -246,52 +246,19 @@ svg {
 path {
   stroke-linecap: round;
   fill: none;
+  stroke: red;
+  stroke-width: 100px;
 }
 
-#path1,
-#path2,
-#path3,
-#path5,
-#path8,
-#path13,
-#path26,
-#path31,
-#path32,
-#path34,
-#path35,
-#path36,
-#path38 {
+/* .a {
   stroke: var(--clr-main-dark-light);
   stroke-width: 0.1rem;
 }
-#path4,
-#path7,
-#path9,
-#path10,
-#path17,
-#path19,
-#path21,
-#path22,
-#path23,
-#path25,
-#path28,
-#path33 {
+.b {
   stroke: var(--clr-main-dark-light);
   stroke-width: 0.05rem;
 }
-#path6,
-#path11,
-#path12,
-#path14,
-#path15,
-#path16,
-#path18,
-#path24,
-#path27,
-#path29,
-#path30,
-#path37,
-#path39 {
+.c {
   stroke: var(--clr-main-dark-light);
   stroke-width: 0.3rem;
-}
+} */
