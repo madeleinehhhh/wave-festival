@@ -47,6 +47,9 @@ nav {
   text-align: center;
   font-size: 1.3em;
 }
+.menu-switch {
+  display: none;
+}
 header {
   color: var(--clr-main-bright-solid);
   text-align: center;
@@ -159,13 +162,16 @@ h4 {
 }
 
 @media screen and (min-width: 48rem) {
+  .menu-switch {
+    display: inline;
+  }
   nav.menu {
     position: fixed;
     top: 0;
     right: 0;
     background-color: var(--clr-bg-half);
     height: 100%;
-    width: 70vw;
+    width: 30vw;
     padding-top: 30vh;
     z-index: 29;
     font-size: 1.8em;
@@ -180,7 +186,7 @@ h4 {
     top: 8vw;
     z-index: 30;
     text-transform: uppercase;
-    color: var(--clr-neutral-light);
+    color: var(--clr-accent-bright);
     display: inline-block;
   }
 
