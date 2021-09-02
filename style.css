@@ -14,6 +14,7 @@
 
   --clr-accent-muted: #e45f56;
   --clr-accent-bright: #ebba40;
+  --clr-accent-bright-half: rgba(235, 187, 64, 0.5);
 
   --clr-neutral-light: rgba(255, 255, 255, 0.9);
 }
@@ -164,19 +165,52 @@ h4 {
   #bands-toggle {
     display: inline;
   }
-  #bands-list {
+  #bands-slideshow {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--clr-bg-half);
-    height: 100%;
-    width: 30vw;
+    background-color: var(--clr-accent-bright);
+    height: 100vh;
+    width: 60vw;
     padding-top: 30vh;
     z-index: 29;
     font-size: 1.8em;
     transition: left 1s;
+    overflow: hidden;
   }
-  #bands-list a {
+  .holder {
+    height: 60vw;
+    width: 1000000vw;
+    transition: left 1s;
+  }
+  .holder div {
+    float: left;
+    width: 60vw;
+    height: 60vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slide-1 {
+    background-image: url(images/Centrosaurus_dinosaur.png);
+  }
+  .slide-2 {
+    background-image: url(images/Hollanda_luceria_2021.jpg);
+  }
+  .slide-3 {
+    background-image: url(images/Lambeosaurus_magnicristatus_DB.jpg);
+  }
+  .slide-4 {
+    background-image: url(images/Macronaria_scrubbed_enh.jpg);
+  }
+  .slide-5 {
+    background-image: url(images/Ornithopods_jconway.jpg);
+  }
+  .slide-6 {
+    background-image: url(images/Pasta-Brontosaurus.jpg);
+  }
+
+  #bands-slideshow a {
     display: block;
     margin-bottom: 0.5vh;
   }
@@ -186,7 +220,7 @@ h4 {
     top: 8vw;
     z-index: 30;
     text-transform: uppercase;
-    color: var(--clr-accent-bright);
+    color: #fff;
     display: inline-block;
   }
 
@@ -197,7 +231,7 @@ h4 {
   .open {
     transform: translateX(0%);
   }
-  #bands-list,
+  #bands-slideshow,
   #bands-toggle {
     transition: translate 0.5s ease;
   }
