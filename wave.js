@@ -21,7 +21,7 @@ const svg = document.querySelector("svg")
 let currentPath
 
 // this creates a variable to hold our class 
-let style;
+let styleWave;
 
 // this is the array for the path of the path
 let xs = []
@@ -54,11 +54,11 @@ function waves() {
 
 function setStyle() {
   if (k <= 0.3) {
-    style = "a"
+    styleWave = "a"
   } else if (k <= 0.6) {
-    style = "b"
+    styleWave = "b"
   } else {
-    style = "c"
+    styleWave = "c"
   }
 }
 
@@ -68,6 +68,6 @@ for (; j <= 50 && w <= width; j++) {
   k = Math.random()
   setStyle()
   currentPath = document.createElementNS('http://www.w3.org/2000/svg', "path")
-  currentPath.classList.add(style)
+  currentPath.classList.add(styleWave)
   waves()
 }

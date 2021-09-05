@@ -1,25 +1,25 @@
 :root {
-  --clr-bg: rgb(185, 206, 237, 0.6);
-  --clr-bg-half: rgb(185, 206, 237, 0.95);
+  --clr-bg:rgb(185, 206, 237, 0.6);
+  --clr-bg-half:rgb(185, 206, 237, 0.95);
 
-  --clr-main-dark: #313c82;
-  --clr-main-dark-dark: rgba(49, 60, 130, 0.5);
-  --clr-main-dark-medium: rgba(49, 60, 130, 0.25);
-  --clr-main-dark-light: rgba(49, 60, 130, 0.12);
+  --clr-main-dark:#313c82;
+  --clr-main-dark-dark:rgba(49, 60, 130, 0.5);
+  --clr-main-dark-medium:rgba(49, 60, 130, 0.25);
+  --clr-main-dark-light:rgba(49, 60, 130, 0.12);
 
-  --clr-main-bright-solid: rgba(134, 251, 185);
-  --clr-main-bright: rgba(134, 251, 185, 0.7);
-  --clr-main-bright-medium: rgba(134, 251, 185, 0.25);
-  --clr-main-bright-light: rgba(134, 251, 185, 0.12);
+  --clr-main-bright-solid:rgba(134, 251, 185);
+  --clr-main-bright:rgba(134, 251, 185, 0.7);
+  --clr-main-bright-medium:rgba(134, 251, 185, 0.25);
+  --clr-main-bright-light:rgba(134, 251, 185, 0.12);
 
-  --clr-accent-muted: #e45f56;
-  --clr-accent-bright: #ebba40;
-  --clr-accent-bright-half: rgba(235, 187, 64, 0.5);
+  --clr-accent-muted:#e45f56;
+  --clr-accent-bright:#ebba40;
+  --clr-accent-bright-half:rgba(235, 187, 64, 0.5);
 
-  --clr-neutral-light: rgba(255, 255, 255, 0.9);
+  --clr-neutral-light:rgba(255, 255, 255, 0.9);
 
-  --width-slideshow: 100;
-  --unit-width: 1vw;
+  --width-slideshow:60;
+  --unit-width:1vw;
 }
 
 body {
@@ -174,7 +174,7 @@ h4 {
     right: 0;
     background-color: var(--clr-accent-bright);
     height: 100vh;
-    width: var(--width-slideshow);
+    width: calc(var(--width-slideshow) * var(--unit-width));
     padding-top: 10vh;
     z-index: 29;
     font-size: 1.8em;
@@ -192,7 +192,7 @@ h4 {
   }
   #holder div {
     float: left;
-    width: var(--width-slideshow);
+    width: calc(var(--width-slideshow) * var(--unit-width));
     height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,8 +223,8 @@ h4 {
   }
   #bands-toggle a {
     position: fixed;
-    right: 8vw;
-    top: 8vw;
+    right: 2em;
+    top: 2em;
     z-index: 30;
     text-transform: uppercase;
     color: #fff;
@@ -235,7 +235,7 @@ h4 {
     position: absolute;
     bottom: 2em;
     right: 0;
-    width: var(--width-slideshow);
+    width: calc(var(--width-slideshow) * var(--unit-width));
     z-index: 100;
 
     text-align: center;
@@ -272,9 +272,9 @@ h4 {
 
 
   @media screen and (min-width: 48rem) {
-    :root {
-      --width-slideshow: 60vw;
-    }
+    /* :root {
+      --width-slideshow: 60;
+    } */
 
   .container {
     display: flex;

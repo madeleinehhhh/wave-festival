@@ -4,7 +4,7 @@ let currentSlide = 0
 let slideNumber
 
 let widthSlideshow = style.getPropertyValue('--width-slideshow')
-console.log(widthSlideshow)
+let unit = style.getPropertyValue('--unit-width').slice(`1`)
 
 // how many slides total?
 let totalSlides = document.querySelectorAll('#holder div').length
@@ -20,7 +20,8 @@ stepsText(currentSlide)
 
 // this moves the slide to the left and runs the slide counter
 let moveSlide = function(slide) {
-  let leftPosition = (slide * widthSlideshow) + 'vw'
+  let leftPosition = (-slide * widthSlideshow) + unit
+  console.log(leftPosition)
   document.getElementById('holder').style.left=leftPosition
   stepsText(slide)
 }
