@@ -1,5 +1,5 @@
 let bandsToggle = document.getElementById("bands-toggle")
-let bandsList = document.getElementById("bands-list")
+let bandsList = document.getElementById("bands-slideshow")
 
 bandsToggle.addEventListener('click', function () {
   bandsList.classList.toggle('close')
