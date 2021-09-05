@@ -17,6 +17,9 @@
   --clr-accent-bright-half: rgba(235, 187, 64, 0.5);
 
   --clr-neutral-light: rgba(255, 255, 255, 0.9);
+
+  --width-slideshow: 100;
+  --unit-width: 1vw;
 }
 
 body {
@@ -171,22 +174,26 @@ h4 {
     right: 0;
     background-color: var(--clr-accent-bright);
     height: 100vh;
-    width: 60vw;
-    padding-top: 30vh;
+    width: var(--width-slideshow);
+    padding-top: 10vh;
     z-index: 29;
     font-size: 1.8em;
     transition: left 1s;
     overflow: hidden;
   }
-  .holder {
+  #holder {
     height: 60vw;
     width: 1000000vw;
     transition: left 1s;
+
+    position: relative;
+    left: 0;
+    top: 0;
   }
-  .holder div {
+  #holder div {
     float: left;
-    width: 60vw;
-    height: 60vw;
+    width: var(--width-slideshow);
+    height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -224,6 +231,33 @@ h4 {
     display: inline-block;
   }
 
+  #steps {
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    width: var(--width-slideshow);
+    z-index: 100;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  #steps a {
+    text-decoration: none;
+  }
+
+  #prev, #next {
+    position: absolute;
+    bottom: 2em;
+  }
+  #prev {
+    left: 1em;
+  }
+  #next {
+    right: 0;1em
+  }
+
   /* navigation & toggle motion */
   .close {
     transform: translateX(100%);
@@ -238,6 +272,9 @@ h4 {
 
 
   @media screen and (min-width: 48rem) {
+    :root {
+      --width-slideshow: 60vw;
+    }
 
   .container {
     display: flex;
